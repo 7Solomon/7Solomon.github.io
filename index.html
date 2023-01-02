@@ -21,8 +21,8 @@
 
 
   <div class="verse">
-    <span style="color:#ffffff">{{data['verse'][0]}}</span>
-    <div class="place"><b>&mdash;{{data['verse'][1]}}</b></div>
+    <span style="color:#ffffff">Verse</span>
+    <div class="place"><b>&mdash;Place</b></div>
   </div>
 
   <div class="chat">{{data['chat']}}</div>
@@ -39,17 +39,15 @@
   const html = await response.text();
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
-  console.log(doc);
-  console.log(doc.querySelector('.losungen-verse1txt'));
-  console.log(doc.querySelector('.losungen-verse1verse'));
-  //const verse = doc.querySelector('losungen-verse1txt').textContent;
-  //const place = doc.querySelector('losungen-verse1verse').textContent;
-/*
+
+
+  const verse = doc.querySelector('.losungen-verse1txt').textContent;
+  const place = doc.querySelector('.losungen-verse1verse').textContent;
+
   console.log(verse);
   document.getElementByClass(verse).textContent = verse;
   console.log(place);
   document.getElementByClass(place).textContent = place;
-*/
   }
 
  
