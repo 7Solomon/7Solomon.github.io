@@ -49,12 +49,9 @@
     document.getElementById('clock').textContent = hours + ":" + minutes + ":" + seconds;   
 }
 
-  function setVariables_in_HTML(){
-  }
-  
-  setVariables_in_HTML()
+  document.requestFullscreen()
+  setInterval(location.reload(), 600000);
   setInterval(showTime, 500);  
-  //setInterval(location.reload(), 600000);
 
 
 
