@@ -47,7 +47,7 @@ window.open(popUpURL, "", fenOpts);
 
 
   async function scrapeVerse() {
-  const response = await fetch("http://www.losungen.de/heute.php");
+  const response = await fetch("https://www.losungen.de/heute.php");
   const html = await response.text();
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
