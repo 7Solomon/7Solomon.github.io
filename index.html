@@ -39,16 +39,17 @@
   const html = await response.text();
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
-    
+  console.log(doc);
   console.log(doc.querySelector('losungen-verse1txt'));
   console.log(doc.querySelector('losungen-verse1verse'));
-  const verse = doc.querySelector('losungen-verse1txt').textContent;
-  const place = doc.querySelector('losungen-verse1verse').textContent;
-
+  //const verse = doc.querySelector('losungen-verse1txt').textContent;
+  //const place = doc.querySelector('losungen-verse1verse').textContent;
+/*
   console.log(verse);
   document.getElementByClass(verse).textContent = verse;
   console.log(place);
   document.getElementByClass(place).textContent = place;
+*/
   }
 
  
