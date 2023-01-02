@@ -57,9 +57,9 @@ window.open(popUpURL, "", fenOpts);
   const place = doc.querySelector('.losungen-verse1verse').textContent;
 
   console.log(verse);
-  document.getElementsByClassName(verse).innerHTML = verse;
+  document.getElementsByClassName(verse)[0].innerHTML = verse;
   console.log(place);
-  document.getElementsByClassName(place).innerHTML = place;
+  document.getElementsByClassName(place)[0].innerHTML = place;
   }
 
  
