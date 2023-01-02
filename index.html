@@ -35,7 +35,7 @@
 
 <script>
   async function scrapeVerse() {
-  const response = await fetch("http://www.losungen.de/die-losungen/");
+  const response = await fetch("https://www.losungen.de/die-losungen/");
   const html = await response.text();
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
