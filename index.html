@@ -34,6 +34,22 @@
 <!-- JavaScript Stuff-->
 
 <script>
+  async function scrapeWebsite() {
+  const response = await fetch("https://www.bible.com/de/verse-of-the-day");
+  const html = await response.text();
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
+
+  const verse = doc.querySelector('p.yv-gray50.mt0.mb2').textContent;
+  const place = doc.querySelector('p.usfm.fw7.mt0.mb0.yv-gray25.f7.ttu').textContent;
+
+  console.log(verse);
+  console.log(place);
+  }
+
+    
+  }
+
   function showTime() {  
     const currentTime = new Date();
     const hours = currentTime.getHours();
