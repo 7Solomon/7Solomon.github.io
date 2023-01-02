@@ -39,7 +39,9 @@
   const html = await response.text();
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
-  
+    
+  console.log(doc.querySelector('losungen-verse1txt'));
+  console.log(doc.querySelector('losungen-verse1verse'));
   const verse = doc.querySelector('losungen-verse1txt').textContent;
   const place = doc.querySelector('losungen-verse1verse').textContent;
 
