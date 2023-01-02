@@ -1,0 +1,17 @@
+.clock {
+    float: right;
+    position: absolute;
+    right:15px;
+
+	background: #3d556d;
+    width:200px;
+    height:90px;
+    border:2px solid whitesmoke;
+    border-radius:15px;
+    
+    
+    color:#ecf0f1;
+    text-align:center;
+    line-height:90px;
+    font-size:40px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/static/css/background.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/verse.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/clock.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/chat.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/videoPlayer.css">
+
+  <link href="https://fonts.cdnfonts.com/css/ink-free" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/mv-boli" rel="stylesheet">
+  <title>The Nachrichten</title>
+  
+</head>
+<body> 
+
+  <div class="clock" id="clock"></div>
+
+
+
+  <div class="verse">
+    <span style="color:#ffffff">{{data['verse'][0]}}</span>
+    <div class="place"><b>&mdash;{{data['verse'][1]}}</b></div>
+  </div>
+
+  <div class="chat">{{data['chat']}}</div>
+
+
+</body>
+</html>
+
+<!-- JavaScript Stuff-->
+
+<script>
+  function showTime() {  
+    const currentTime = new Date();
+    const hours = currentTime.getHours();
+    const minutes = currentTime.getMinutes();
+    const seconds = currentTime.getSeconds();
+    if (hours < 10) {
+        hours = "0" + hours;
+    }
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+    if (seconds < 10) {
+        seconds = "0" + seconds;
+    }
+    document.getElementById('clock').textContent = hours + ":" + minutes + ":" + seconds;   
+}
+
+  function setVariables_in_HTML(){
+  }
+  
+  setVariables_in_HTML()
+  setInterval(showTime, 500);  
+  //setInterval(location.reload(), 600000);
+
+
+
+</script>
+
+
+

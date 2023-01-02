@@ -1,0 +1,15 @@
+.chat{
+    float:right;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+
+    width: 35%;
+    height: 35%;
+    border:2px solid wheat;
+    background-color: black;
+
+    text-align: center;
+    font-size:xx-large;
+    color:aliceblue;
+}
