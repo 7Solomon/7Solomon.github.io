@@ -34,7 +34,7 @@
 <!-- JavaScript Stuff-->
 
 <script>
-  async function scrapeWebsite() {
+  async function scrapeVerse() {
   const response = await fetch("https://www.bible.com/de/verse-of-the-day");
   const html = await response.text();
   const parser = new DOMParser();
@@ -67,6 +67,7 @@
 }
 
   showTime()
+  scrapeVerse()
   setInterval(showTime, 500);  
   var width = window.innerWidth;
   var height = window.innerHeight;
