@@ -34,6 +34,19 @@
 
 
 <script>
+  
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(body),
+    headers: {
+    'Content-Type': 'application/json'
+    }
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+  
+  
   async function scrapeVerse() {
   const response = await fetch("https://losung.net");
   const html = await response.text();
