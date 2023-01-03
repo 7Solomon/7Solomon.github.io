@@ -36,7 +36,7 @@
 <script>
  
   async function scrapeVerse() {
-  const response = await fetch("https://losung.net");
+  const response = await fetch("https://cors-anywhere.herokuapp.com/https://losung.net");
   const html = await response.text();
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
